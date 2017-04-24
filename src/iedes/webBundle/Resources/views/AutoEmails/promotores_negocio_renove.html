@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Respuesta Email</title>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <style>
+        *{ border: solid 1px blue;
+            font-family: 'PT Sans Narrow', sans-serif;
+            font-weight: 400;
+            color: black;
+        }
+        
+        table{
+            width: 100%;        
+        }
+
+        .contenedor-total{
+            float: left;
+            position: relative;
+            left: 50%;
+        }
+
+        .header, .footer{ border: solid 1px red;
+            max-width: 822px;
+            margin: 0 auto;
+            padding: 0px;
+            position: relative;
+            left: -50%;
+        }
+
+        .espacio_inferior{ border: solid 1px red;
+            padding-bottom: 30px;
+        }
+
+        .espacio_superior{ border: solid 1px red;
+            padding-top: 30px;
+        }
+
+        .container{ border: solid 1px red;
+            max-width: 822px;
+            margin: 0 auto;
+            position: relative;
+            left: -50%;
+        }
+
+        .header img,
+        .footer img{ border: solid 1px red;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1, h2, h3, h4{ border: solid 1px red;
+            padding: 0 10%;
+        }
+
+        h1{ border: solid 1px red;
+            text-align: center;
+            font-size: 2em;
+            margin: 0;
+            padding-bottom: 50px;
+        }
+
+        h2{ border: solid 1px red;
+            font-size: 1.8em;
+        }
+
+        h3{ border: solid 1px red;
+            font-size: 1.5em;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            margin: 5px auto;
+        }
+
+        h4{ border: solid 1px red;
+            font-size: 1.5em;
+        }
+
+        h6{ border: solid 1px red;
+            text-align: justify;
+            font-size: 0.7em;
+            margin: 0 4% 0 1%;
+        }
+
+        strong{ border: solid 1px red;
+            font-weight: 700;
+        }
+        
+    </style>
+
+    <table>
+        <tr><td width="auto"></td>
+            <td width="822px">
+                <img src="../../../../../../web/img/mailing/cabecera.png" alt="cabecera mailing de respuesta">
+            </td>
+            <td width="auto"></td>
+        </tr>
+        <tr><td width="auto"></td>
+            <td width="822px">
+                <h1>Gracias por contactar con iEDES Solenergy, <br/> el Gigante de la Energía Solar.</h1>
+                <h3>Has completado correctamente nuestro formulario:</h3>
+                <h3><strong><?php $nombreformulario?></strong></h3>
+                <h4><?php $texto?></h4>
+            </td><td width="auto"></td>
+        </tr>
+        <tr><td width="auto"></td>
+            <td width="822px">
+                <img class="espacio_superior" src="../../../../../../web/img/mailing/pie.png" alt="pie mailing de respuesta">
+            </td><td width="auto"></td>
+        </tr>
+    </table>
+
+
+    <div class="contenedor-total">
+        <div class="header">
+                <img src="../../../../../../web/img/mailing/cabecera.png" alt="cabecera mailing de respuesta">
+        </div>
+
+        <div class="container">
+
+        <h1>Gracias por contactar con iEDES Solenergy, <br/> el Gigante de la Energía Solar.</h1>
+        <h3>Has completado correctamente nuestro formulario:</h3>
+        <h3><strong><?php $nombreformulario?></strong></h3>
+        <h4><?php $texto?></h4>
+
+        </div>
+
+        <div class="footer">
+                <img class="espacio_superior" src="../../../../../../web/img/mailing/pie.png" alt="pie mailing de respuesta">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+index:
+    pattern: /
+    defaults: { _controller: iedeswebBundle:Default:index }
+
+internationalization:
+    path:     /{locale}/internationalization
+    defaults: { _controller: iedeswebBundle:Default:internationalization }
+    requirements:
+        locale: en|es
+
+calcula_online:
+    pattern: /calcula-online/
+    defaults: { _controller: iedeswebBundle:Default:calculaOnline }
+
+energia_solar_termica:
+    pattern: /energia-solar-termica/
+    defaults: { _controller: iedeswebBundle:Default:esTermica }
+
+energia_solar_fotovoltaica:
+    pattern: /energia-solar-fotovoltaica/
+    defaults: { _controller: iedeswebBundle:Default:esFotovoltaica }
+
+producto_solar_termica:
+    pattern: /producto-solar-termica/
+    defaults: { _controller: iedeswebBundle:Default:psTermica }
+
+osmosis:
+    pattern: /osmosis/
+    defaults: { _controller: iedeswebBundle:Default:osmosis }
+    
+descalcificadores:
+    pattern: /descalcificadores/
+    defaults: { _controller: iedeswebBundle:Default:descalcificadores }
+    
+calderas:
+    pattern: /calderas/
+    defaults: { _controller: iedeswebBundle:Default:calderas }
+    
+estufas:
+    pattern: /estufas-pellets/
+    defaults: { _controller: iedeswebBundle:Default:estufas } 
+    
+cloradores_salinos:
+    pattern: /clorador_salino/
+    defaults: { _controller: iedeswebBundle:Default:clorador }
+    
+aires_acondicionados:
+    pattern: /aire_acondicionado/
+    defaults: { _controller: iedeswebBundle:Default:aireAcondicionado }
+    
+aerotermias:
+    pattern: /aerotermia/
+    defaults: { _controller: iedeswebBundle:Default:aerotermia }
+    
+delegaciones:
+    pattern: /delegaciones/
+    defaults: { _controller: iedeswebBundle:Default:delegaciones }
+    
+delegacionesX:
+    pattern: /delegaciones-{delegacion}
+    defaults: { _controller: iedeswebBundle:Default:delegacionesX }
+
+consejos:
+    pattern: /consejos/
+    defaults: { _controller: iedeswebBundle:Default:consejos }
+
+faq:
+    pattern: /preguntas-frecuentes/
+    defaults: { _controller: iedeswebBundle:Default:faq }
+
+historia:
+    pattern: /historia/
+    defaults: { _controller: iedeswebBundle:Default:historia }
+
+grupo_iedes:
+    pattern: /grupo-iedes/
+    defaults: { _controller: iedeswebBundle:Default:grupoIedes }
+
+premios:
+    pattern: /premios/
+    defaults: { _controller: iedeswebBundle:Default:premios }
+
+web_sitemap:
+    pattern:  /sitemap.xml
+    defaults: { _controller: iedeswebBundle:Default:sitemap}
+ 
+le_llamamos:
+    pattern: /te-llamamos/
+    defaults: { _controller: iedeswebBundle:Default:lellamamos }
+    
+error404:
+    pattern: /error-404/
+    defaults: { _controller: iedeswebBundle:Default:error404 }
+
+
+loginas:
+    path: /intranet/loginas/{idusuario}/
+    defaults: {_controller: iedeswebBundle:Security:loginas }
+
+login:
+    path: /login/
+    defaults: { _controller: iedeswebBundle:Security:login }
+    
+login_check:
+    path: /login_check/
+
+logout:
+    path: /logout/
+
+   
+
+intranet:
+    path: /intranet/
+    defaults: { _controller: iedeswebBundle:Default:intranet }  
+    
+catalogos:
+    path: /intranet/catalogos/
+    defaults: { _controller: iedeswebBundle:Usuario:catalogos}
+
+usuarios_menu:
+    path: /intranet/usuarios/
+    defaults: { _controller: iedeswebBundle:Usuario:menuUsuarios }  
+
+registrar_usuario:
+    path: /intranet/usuarios/registrar/
+    defaults: { _controller: iedeswebBundle:Usuario:registrarUsuario }
+ 
+listado_usuario:
+    path: /intranet/usuarios/listado/
+    defaults: { _controller: iedeswebBundle:Usuario:listadoUsuarios } 
+    
+editar_usuario:
+    path: /intranet/usuarios/editar/{idusuario}/
+    defaults: { _controller: iedeswebBundle:Usuario:editarUsuario, idusuario: null  } 
+
+#visitas_menu:
+#    path: /intranet/visitas/
+#    defaults: { _controller: iedeswebBundle:Usuario:menuVisitas }  
+
+crear_visita:
+    path: /intranet/visitas/crear
+    defaults: { _controller: iedeswebBundle:Usuario:crearvisita}
+
+editar_visita:
+    path: /intranet/visitas/editar/{idvisita}
+    defaults: { _controller: iedeswebBundle:Usuario:editarVisita, idvisita: null }
+ 
+#asignar_visita:
+#    path: /intranet/visitas/asignar/{idvisita}
+#    defaults: { _controller: iedeswebBundle:Usuario:asignarvisita, idvisita: null }
+ 
+#finalizar_visita:
+#    path: /intranet/visitas/finalizar/{idvisita}
+#    defaults: { _controller: iedeswebBundle:Usuario:finalizarvisita, idvisita: null } 
+
+#rescatar_visita:
+#    path: /intranet/visitas/rescatar/{idvisita}
+#    defaults: { _controller: iedeswebBundle:Usuario:rescatarVisita, idvisita: null } 
+
+#estado_visitas:
+#    path: /intranet/visitas/estado/{idvisita}
+#    defaults: { _controller: iedeswebBundle:Usuario:estadovisitas, idvisita: null } 
+
+visitas:
+    path: /intranet/visitas/{idvisita}
+    defaults: { _controller: iedeswebBundle:Usuario:estadovisitas, idvisita: null } 
+
+#contactos_menu:
+#    path: /intranet/contactos/
+#    defaults: { _controller: iedeswebBundle:Usuario:menuContactos }  
+
+crear_contacto:
+    path: /intranet/contactos/crear/
+    defaults: { _controller: iedeswebBundle:Usuario:crearcontacto }
+    
+#listado_contacto:
+#    path: /intranet/contactos/listado/{idcontacto}
+#    defaults: { _controller: iedeswebBundle:Usuario:listadoContactos, idcontacto: null}
+
+convertir_contacto:
+    path: /intranet/contactos/convertir/{idcontacto}{filtro}{filtro2}
+    defaults: { _controller: iedeswebBundle:Usuario:convertirContacto, idcontacto: null, filtro: null, filtro2: null}
+ 
+contactos:
+    path: /intranet/contactos/{idcontacto}
+    defaults: { _controller: iedeswebBundle:Usuario:listadoContactos, idcontacto: null} 
+ 
+datos-diciembre:
+    path: /intranet/datos-diciembre/
+    defaults: { _controller: iedeswebBundle:Usuario:datosDiciembre}  
+    
+datos-enero:
+    path: /intranet/datos-enero/
+    defaults: { _controller: iedeswebBundle:Usuario:datosEnero}  
+ 
+aqualider:
+    path: /
+    defaults: { _controller: iedeswebBundle:Default:aqualider}  
+
+nosotros:
+    path: /nosotros
+    defaults: { _controller: iedeswebBundle:Default:nosotros}  
+
+porque:
+    path: /por-que
+    defaults: { _controller: iedeswebBundle:Default:porque}  
+    
+productos:
+    path: /productos
+    defaults: { _controller: iedeswebBundle:Default:productos}  
+    
+contacto:
+    path: /contacto
+    defaults: { _controller: iedeswebBundle:Default:contacto} 
+
+faq:
+    path: /faq
+    defaults: { _controller: iedeswebBundle:Default:faq} 
+    
+internationalization:
+    path:     /{locale}/internationalization
+    defaults: { _controller: iedeswebBundle:Default:internationalization }
+    requirements:
+        locale: en|es
+
+#Lo dejamos como ejemplo
+#index_ancla:
+#    pattern: /{anchor}
+#    defaults: { _controller: iedeswebBundle:Default:indexAncla }

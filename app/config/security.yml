@@ -1,0 +1,28 @@
+security:
+    encoders:
+        iedes\webBundle\Entity\Usuarios: { algorithm: sha1, iterations: 1, encode_as_base64: false }
+        
+    providers:
+        usuarios:
+            entity: { class: iedes\webBundle\Entity\Usuarios }
+        
+    firewalls:
+        frontend:
+            pattern: ^/*
+            security: true
+            anonymous: ~
+            form-login: 
+                login_path: login
+                check_path: login_check
+            logout: 
+                path: logout
+                target: intranet
+            
+    access_control:
+        
+        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        #- { path: ^/*, roles: [ROLE_ADMIN] }
+
+        - { path: ^/intranet, roles: [ ROLE_OFICINA, ROLE_RESCATE, ROLE_RECEPCION, ROLE_COORDINADOR_TELEMARKETING, ROLE_WEB, ROLE_CAPTADOR, ROLE_TELEMARKETING, ROLE_COMERCIAL, ROLE_JEFE_COMERCIAL, ROLE_CONTROLLER, ROLE_ADMIN ] }
+        - { path: ^/intranet/*, roles: [ ROLE_RESCATE, ROLE_RECEPCION, ROLE_COORDINADOR_TELEMARKETING, ROLE_WEB, ROLE_CAPTADOR, ROLE_TELEMARKETING, ROLE_COMERCIAL, ROLE_JEFE_COMERCIAL, ROLE_CONTROLLER, ROLE_ADMIN ] }
+        - { path: ^/*, roles: IS_AUTHENTICATED_ANONYMOUSLY }

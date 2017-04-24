@@ -1,0 +1,25 @@
+parameters:
+    email_service.class: iedes\webBundle\Utils\email
+    utils_service.class: iedes\webBundle\Utils\utils
+
+services:
+    email_service:
+        class: %email_service.class%
+        arguments: 
+            em: "@doctrine.orm.entity_manager"
+            container: "@service_container"     
+           
+    utils_service:
+        class: %utils_service.class%
+        
+    #app.locale_listener:
+    #    class: iedes\webBundle\EventListener\LocaleListener
+    #    arguments: ['%kernel.default_locale%']
+    #    tags:
+    #        - { name: kernel.event_subscriber }
+            
+    #app.user_locale_listener:
+    #    class: iedes\webBundle\EventListener\UserLocaleListener
+    #    arguments: ['@session']
+    #    tags:
+    #        - { name: kernel.event_listener, event: security.interactive_login, method: onInteractiveLogin }

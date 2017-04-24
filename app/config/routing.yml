@@ -1,0 +1,4 @@
+iedesweb:
+    resource: "@iedeswebBundle/Resources/config/routing.yml"
+    prefix:   /
+

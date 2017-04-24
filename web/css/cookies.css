@@ -1,0 +1,110 @@
+#cookiesId{
+	display: none;
+}
+
+.cookiesBtn{
+	background-color: rgba(255, 255, 255, 1);
+	display:inline;
+	position:absolute; 
+	left:1%; 
+	top:-25px;
+	font-size:15px;
+	height:25px;
+	padding-left:35px;
+	padding-right:35px;
+
+	-moz-border-radius:    10px 10px 0px 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	border-radius:         10px 10px 0px 0px;
+
+	-webkit-box-shadow: 2px -2px 1px rgba(190, 4, 17, 0.86);
+	-moz-box-shadow:    2px -2px 1px rgba(190, 4, 17, 0.86);
+	box-shadow:         2px -2px 1px rgba(190, 4, 17, 0.86);
+}
+
+.cookiesSms{	
+	background-color: rgba(255, 255, 255, 0.9);
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 1%;
+	padding: 15px 0;
+	font-size: 17px;
+    clear: both;
+	color: #333;
+	bottom: 0px;	
+	position: fixed;
+	left: 0px;
+	transition: bottom 0.6s;
+	-webkit-transition:bottom 1s; /* Safari */
+	-webkit-box-shadow: 2px -2px 1px rgba(190, 4, 17, 0.86);
+	-moz-box-shadow:    2px -2px 1px rgba(190, 4, 17, 0.86);
+	box-shadow:         2px -2px 1px rgba(190, 4, 17, 0.86);
+	z-index:999999999;
+}
+ 
+ 
+/* Fin del CSS para cookies */
+
+.glyphicon-ok		{
+	height:         20px;
+	width:         20px;
+	text-align:         left;}
+button.btn.btn-default		{}
+#notificaciones{
+	background-color: green;
+}
+
+#notificaciones span{
+	color: black;
+	float: right;
+	padding: 0 20px;
+}
+#notificaciones ul li{
+	margin: 0px;
+	padding: 0px !important;
+	background-color: red;
+	line-height: 35px;;
+}
+ul{
+	/* padding: 20px 0; */
+}
+a.notificaciones-toggle{
+	padding: 3px 38px 1px 10px !important;
+}
+p{
+}
+.alert-info{;
+}
+.alert{
+    overflow: auto;
+    border: 1px red solid;
+    position: absolute !important;
+    border-radius: 8px;
+    text-align: center;
+    left: 10px;
+    right: 10px;
+    top: 75px;
+    padding: 12px;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{
+	display: block;
+}
+body{
+	line-height: 1.42857143;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	background-color: #fff;
+	color: #333;
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+}
+html, body{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#notificaciones ul{
+}

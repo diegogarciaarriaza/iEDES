@@ -1,0 +1,4 @@
+Importante
+
+Modificar el fichero config.inc.php para evitar el autologin en phpmyadmin. 
+    -> Modificar la línea $cfg['Servers'][$i]['auth_type'] = 'config'; por $cfg['Servers'][$i]['auth_type'] = 'http';
