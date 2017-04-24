@@ -1,3 +1,0 @@
-rm -rf cache/dev/*
-rm -rf cache/prod/*
-rm -rf logs/*
